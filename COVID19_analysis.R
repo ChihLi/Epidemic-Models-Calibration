@@ -1,17 +1,18 @@
 library(hetGP)
 library(numDeriv)
 library(lhs)
+library(gelnet)
 library(SimInf)
 library(deSolve)
 library(GPfit)
 library(covid19.analytics)
 library(ggplot2)
-source("var.theta.R")
-source("cv.KPR.R")
-source("KPR.R")
-source("SEIR.ode.R")
-source("SEIR.sim.R")
-source("erfinv.R")
+source("R/var.theta.R")
+source("R/cv.KPR.R")
+source("R/KPR.R")
+source("R/SEIR.ode.R")
+source("R/SEIR.sim.R")
+source("R/erfinv.R")
 
 ### load the reported data
 n <- 20 # number of countries we study here 
@@ -23,7 +24,7 @@ summary.confirm <- aggregate(all.ts[all.ts[,"status"] == "confirmed", max(select
 country.rank <- summary.confirm[sort.int(summary.confirm$x, decreasing = TRUE, index.return = TRUE)$ix, "Group.1"]
 
 ### population of each country
-N.world <- read.csv("world_population.csv", stringsAsFactors = FALSE)
+N.world <- read.csv("data/world_population.csv", stringsAsFactors = FALSE)
 N.world[3,1] <- "US"
 
 ### select the top n countries
