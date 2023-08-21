@@ -1,5 +1,5 @@
 # Reproducibility for Sung and Hung (2023) Efficient Calibration for Imperfect Epidemic Models with Applications to the Analysis of COVID-19
-This folder consists of the data and R code for the manuscript ``Efficient Calibration for Imperfect Epidemic Models with Applications to the Analysis of COVID-19'' by Sung and Hung (2023). 
+This folder consists of the data and R code for the manuscript [Efficient Calibration for Imperfect Epidemic Models with Applications to the Analysis of COVID-19](https://arxiv.org/abs/2009.12523) by Sung and Hung (2023). 
 
 * The code folder reproduces the results in the Sections 4 and 5 of the manuscript. 
   * The required R packages include `hetGP`, `numDeriv`, `lhs`, `SimInf`, `deSolve`, `covid19.analytics`, `ggplot2`, `snowfall`, `doParallel`, `foreach`, `plyr`, `gelnet`, `MRFA`, `grplasso`, `scales`, and `GPfit`
